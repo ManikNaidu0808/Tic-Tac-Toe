@@ -4,12 +4,13 @@
 }
 
 nav {
-    background-color: rgb(154, 44, 154);
+    background-color: rgb(90, 224, 72);
     color: white;
     height: 54px;
     font-size: 27px;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0 12px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -19,13 +20,13 @@ nav ul {
 }
 
 .gameContainer {
-    /* background-color: yellow; */
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
 
 .container {
+    background-color: rgb(224, 224, 162);
     display: grid;
     grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(3, 10vw);
@@ -76,7 +77,7 @@ nav ul {
 }
 
 #reset {
-    margin: 0px 12px;
+    margin: 17px 20px;
     padding: 4px 15px;
     border-radius: 10px;
     background-color: yellowgreen;
