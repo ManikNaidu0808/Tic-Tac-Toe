@@ -2,7 +2,7 @@ let music = new Audio("GameOn.mp3");
 let audioTurn = new Audio("tong.mp3");
 let gameover = new Audio("GameOver.mp3");
 let turn = "X";
-let isgameover = false;
+let isgameover = false; // Initialize game over flag as false
 
 //Function to change the turn
 const changeTurn = () => {
@@ -12,10 +12,12 @@ const changeTurn = () => {
 //Function to check win
 const checkWin = () => {
 
-    if (isgameover) {
-        alert("Game Over. Press any key to play again");
-    }
+    // if (isgameover) {
+    //     alert("Game Over. Press any key to play again");
+    //     return; // Exit the function to prevent further moves
+    // }
 
+    //Posibilities to win
     let boxtext = document.getElementsByClassName('boxtext');
     let wins = [
         [0, 1, 2,5,5,0],
@@ -45,7 +47,7 @@ let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element => {
     let boxtext = element.querySelector('.boxtext');
     element.addEventListener('click', () => {
-        if (boxtext.innerText === '') {
+        if (!isgameover && boxtext.innerText === '') { // Check if the game is not over and the box is empty
             boxtext.innerText = turn;
             turn = changeTurn();
             audioTurn.play();
