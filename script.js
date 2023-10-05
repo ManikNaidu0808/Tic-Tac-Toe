@@ -11,6 +11,11 @@ const changeTurn = () => {
 
 //Function to check win
 const checkWin = () => {
+
+    if (isgameover) {
+        alert("Game Over. Press any key to play again");
+    }
+
     let boxtext = document.getElementsByClassName('boxtext');
     let wins = [
         [0, 1, 2,5,5,0],
@@ -28,8 +33,8 @@ const checkWin = () => {
             isgameover = true;
             gameover.play();
             document.querySelector('.imgbox').getElementsByTagName('iframe')[0].style.width = '300px';
-            document.querySelector(".line").style.transform = `translate(${e[3]}vw ,${e[4]}vw) rotate(${e[5]}deg)` 
-            document.querySelector(".line").style.width = '20vw'  
+            document.querySelector(".line").style.transform = `translate(${e[3]}vw ,${e[4]}vw) rotate(${e[5]}deg)`  ;
+            document.querySelector(".line").style.width = '20vw';
     }
     })
 
